@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+<!-- VINCULAR O JS DO JQUERY -->
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script>
+ // window.onload = function(){};
+// 1º forma de evento de carregamento(mais utilizado)	
+$(document).ready(function(){
+	 // pegar o elemento em js
+	 /*
+	  var tag = document.getElementsByTagName('div')[0]; 
+	  tag.style.border ="1px solid #000000";
+	  tag.style.width ="200px";
+	  tag.style.height = "200px";
+	  */
+	 
+	 // o jquery para ele pegar o tag ou referencia usa seletor CSS
+	  // Jquery();
+	 //var tag = $("div");
+	 
+	  // forma individual de aplicar css
+	 /* 
+	   $("div").css('border', '1px solid #000000');
+	   $("div").css('width', '200px');
+	   $("div").css('height', '200px'); 
+	 */
+
+      // grupar	css
+	 $("div").css(
+	 { border :'1px solid #000000',
+	   width: '200px',
+	   height : '200px'
+	 }).text("COLOCAR TEXTO AGRUPADO").click(function(){
+		  alert('Evento de Jquery');
+	 });
+	
+	$("div").eq(1).click(function(){
+		
+		// mudar a cor da atual div
+		$("div").eq(1).css("background","red");
+	});
+	 
+	 // test == innerHTML
+	// $("div").text("COLOCAR TEXTO")
+	 
+	// javascript funcção de evento
+	// div.onclick = function(){}
+	//evento click  - individual  
+	 /*$("div").click(function(){
+		 
+		 alert('Evento de Jquery');
+	 });*/
+});
+
+	
+
+// 2º forma
+/* $().ready(function(){
+	 alert('2º forma'); 
+});
+*/
+// 3º forma
+
+	/* $(function(){
+	 alert('3º forma');
+});
+*/
+
+	
+</script>
+
+
+
+</head>
+
+<body>
+  
+  <div>
+  	asdsa
+  </div>
+  
+  <div>
+  	
+  </div>
+   
+
+</body>
+ <script>
+   
+	 
+	 
+ </script>
+</html>
